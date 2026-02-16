@@ -19,8 +19,7 @@ html, body {
 .flex-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
 }
 
 .menu {
@@ -28,17 +27,15 @@ html, body {
     justify-content: center;
     gap: 25px;
 }
-.menu__item {
+.menu__item, .list__item {
+    list-style: none;
     font-size: 16px;  
 }
-li {
-    list-style: none;
-}
-a {
+.menu__link, .list__link {
     text-decoration: none;
     color: #2F281E;
 }
-.menu__item:nth-of-type(1) a {
+.menu__item:hover a, .list__item:hover a {
     color: orange;
 }
 .buttons {
@@ -50,31 +47,34 @@ a {
     color: white;
     background-color: orange;
     border: 1px solid #BCD0E5;
-    padding: 10px;
+    padding: 13px 25px;
     display: inline-block;
     min-width: 108px;
     min-height: 46px;
     border-radius: 5px;
     cursor: pointer;
 }
-.buttons .btn:nth-of-type(1) {
+.btn:hover {
     color: var(--main-color);
     background-color: white;
 }
-h1 {
+.title_1 {
     font-size: 44px;
 }
-p {
+.text_picture__text,
+.design_tools__description {
     color: #544837;
 }
-.design_thinking {
+.text_picture .flex-container {
     display: flex;
+    gap: 113px;
 }
-section {
-    margin-bottom: 10%;
+.design_tools .btn,  .text_picture .btn{
+    font-family: "Poppins", sans-serif;
+    padding: 13px 47px;
 }
 
-h2 {
+.title_2 {
     font-size: 36px;
 }
 .design_tools h2 {
@@ -96,5 +96,75 @@ h2 {
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: contain;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+.title_4 {
+    font-size: 16px;
+}
+.text_picture__content .list {
+    list-style: none;
+    padding: 0;
+}
+.text_picture__content .list .list__item {
+    position: relative;
+    padding-left: 65px;
+    margin-bottom: 30px;
+}
+.text_picture__content .list .list__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    background-image: url('./../assets/img/check_mark.png');
+}
+
+hr {
+    height: 1px;
+    background-color: #BCD0E5;
+    border: none;
+}
+
+.footer {
+    margin: 70px auto;
+}
+.title_5 {
+    font-size: 20px;
+    margin: 0;
+}
+.footer .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer__form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+}
+.footer__list .list {
+    display: flex;
+    flex-direction: column; 
+    gap: 16px;
+    padding: 0;
+}
+.footer__form  .form__input::placeholder {
+    font-size: 16px;
+    color: #BCD0E5;
+}
+.footer__form .form__input {
+    border: 1px solid #BCD0E5;
+    padding: 10px;
+    border-radius: 5px;
+}
+.footer__form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
 }
